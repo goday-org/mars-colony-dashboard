@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // GitHub Pages SPA redirect: convert path to query parameter and redirect to index
-      var segmentCount = 1; // adjust if deployed to subdirectory
+      // GitHub Pages SPA redirect for subdirectory deployment
+      // segmentCount = 2 because deployed under /mars-colony-dashboard/
+      var segmentCount = 2;
       var l = window.location;
+      var pathSegments = l.pathname.split('/');
+      // Reconstruct base URL
+      var baseUrl = pathSegments.slice(0, segmentCount).join('/') + '/';
+      // Get the sub-path after base
+      var subPath = pathSegments.slice(segmentCount).join('/');
+      // Redirect to index.html with the sub-path as query parameter
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=' +
-        encodeURIComponent(l.pathname.slice(1))
+        baseUrl + '?p=' + encodeURIComponent('/' + subPath)
       );
     </script>
   </head>
