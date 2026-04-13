@@ -16,7 +16,7 @@ let chart = null
 let isMobile = ref(false)
 
 const computedHeight = computed(() => {
-  return isMobile.value ? 560 : props.height
+  return isMobile.value ? 420 : props.height
 })
 
 const getOption = () => {
