@@ -15,29 +15,26 @@ const chartRef = ref(null)
 let chart = null
 let isMobile = ref(false)
 
-// Responsive: 2x3 grid on mobile (need more height), 1x6 on desktop
 const computedHeight = computed(() => {
-  return isMobile.value ? 500 : props.height
+  return isMobile.value ? 560 : props.height
 })
 
 const getOption = () => {
   const count = props.data.length
   let centers = []
-  
+
   if (isMobile.value) {
-    // Mobile: 2 columns x 3 rows grid
-    // Each row takes 33.33% height, center at 16.67%, 50%, 83.33%
-    // Each column takes 50% width, center at 25%, 75%
-    const cols = 2
-    const rows = Math.ceil(count / cols)
-    const rowHeight = 100 / rows
+    // Mobile: 2 columns x 3 rows with generous spacing
+    // Row centers at 15%, 45%, 75% (avoid top/bottom clipping)
+    const rowCenters = [15, 45, 75]
+    const colCenters = [25, 75]
     
     props.data.forEach((_, index) => {
-      const col = index % cols
-      const row = Math.floor(index / cols)
+      const col = index % 2
+      const row = Math.floor(index / 2)
       centers.push([
-        `${25 + col * 50}%`,  // 25% or 75%
-        `${rowHeight * (row + 0.5)}%`  // 16.67%, 50%, 83.33%
+        `${colCenters[col]}%`,
+        `${rowCenters[row]}%`
       ])
     })
   } else {
@@ -54,18 +51,18 @@ const getOption = () => {
       borderColor: '#2a3050',
       textStyle: { color: '#e0e6f0' },
     },
-    legend: {
+    // No separate legend on mobile - each ring has its own label
+    legend: isMobile.value ? { show: false } : {
       bottom: 0,
-      textStyle: { color: '#667799', fontSize: 10 },
-      itemWidth: 10,
-      itemHeight: 10,
-      itemGap: 8,
+      textStyle: { color: '#667799', fontSize: 11 },
+      itemWidth: 12,
+      itemHeight: 12,
     },
     series: props.data.map((item, index) => ({
       name: item.name,
       type: 'gauge',
       center: centers[index],
-      radius: isMobile.value ? '45%' : '65%',
+      radius: isMobile.value ? '40%' : '65%',
       startAngle: 220,
       endAngle: -40,
       min: 0,
@@ -82,14 +79,15 @@ const getOption = () => {
       splitLine: { show: false },
       axisLabel: { show: false },
       title: {
-        offsetCenter: [0, '65%'],
-        fontSize: isMobile.value ? 9 : 11,
-        color: '#667799'
+        offsetCenter: [0, '68%'],
+        fontSize: isMobile.value ? 10 : 11,
+        color: '#99aabb',
+        fontWeight: 500
       },
       detail: {
         valueAnimation: true,
-        offsetCenter: [0, '35%'],
-        fontSize: isMobile.value ? 12 : 18,
+        offsetCenter: [0, '38%'],
+        fontSize: isMobile.value ? 13 : 18,
         fontWeight: 'bold',
         color: item.color,
         formatter: '{value}%'
