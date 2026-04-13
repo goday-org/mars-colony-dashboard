@@ -1,0 +1,146 @@
+[
+  {
+    "id": "radiation",
+    "name": "辐射暴露",
+    "severity": 5,
+    "likelihood": 5,
+    "level": "严重",
+    "levelColor": "#ff4444",
+    "icon": "☢️",
+    "description": "火星缺乏全球磁场和稠密大气，银河宇宙射线（GCR）和太阳高能粒子（SEP）可直接到达地表。",
+    "impact": "往返火星最低约 0.66 西弗特（Sv），显著增加癌症风险。长期影响包括 DNA 损伤、生殖细胞突变率升高。",
+    "mitigation": [
+      "栖息地辐射屏蔽（风化层覆盖 2-3 米）",
+      "药物防护（辐射防护剂研发中）",
+      "等离子偏转盾（概念阶段）",
+      "任务时间最小化"
+    ],
+    "data": { "dose": "0.66 Sv（往返最低）", "cancerRiskIncrease": "~3-5%" }
+  },
+  {
+    "id": "toxic-dust",
+    "name": "有毒尘埃",
+    "severity": 4,
+    "likelihood": 5,
+    "level": "严重",
+    "levelColor": "#ff4444",
+    "icon": "☠️",
+    "description": "火星尘埃含有高氯酸盐、二氧化硅、氧化铁、石膏及微量有毒金属（铬、铍、砷、镉），粒径极细小。",
+    "impact": "肺部刺激、矽肺病风险（类似矿工尘肺病）、血液吸收有毒金属。火星表面普遍存在。",
+    "mitigation": [
+      "密闭环境与高效空气过滤系统",
+      "EVA 服防尘密封设计",
+      "进出气闸除尘程序",
+      "定期健康监测"
+    ],
+    "data": { "composition": "高氯酸盐、SiO₂、Fe₂O₃", "healthAnalogy": "矽肺病/煤矿工人尘肺病" }
+  },
+  {
+    "id": "landing",
+    "name": "着陆失败",
+    "severity": 5,
+    "likelihood": 3,
+    "level": "严重",
+    "levelColor": "#ff4444",
+    "icon": "🎯",
+    "description": "火星大气稀薄（约地球 1%），传统着陆方法质量上限约 1 吨。Starship 目标数十吨级着陆。",
+    "impact": "任务完全失败，人员伤亡风险。火星着陆任务历史成功率约 50%。",
+    "mitigation": [
+      "2026 年无人任务收集实际 EDL 数据",
+      "冗余导航和制导系统",
+      "多候选着陆点评估",
+      "渐进式增加着陆质量"
+    ],
+    "data": { "historicalSuccessRate": "~50%", "targetMass": "数十吨级" }
+  },
+  {
+    "id": "life-support",
+    "name": "生命支持系统故障",
+    "severity": 5,
+    "likelihood": 2,
+    "level": "高",
+    "levelColor": "#ff6b35",
+    "icon": "🔧",
+    "description": "远离地球补给，生命支持系统需高度自主运行。氧气、水、食物供应中断将致命。",
+    "impact": "系统故障可导致人员死亡。补给周期长达 26 个月（地球-火星转移窗口）。",
+    "mitigation": [
+      "高度冗余设计（多套独立系统）",
+      "自主修复能力（3D 打印备件）",
+      "闭环回收率 >98%",
+      "应急储备（至少 6 个月余量）"
+    ],
+    "data": { "resupplyCycle": "26 个月", "targetRecycling": ">98%" }
+  },
+  {
+    "id": "microgravity",
+    "name": "微重力健康效应",
+    "severity": 4,
+    "likelihood": 5,
+    "level": "高",
+    "levelColor": "#ff6b35",
+    "icon": "🦴",
+    "description": "长期微重力/低重力环境导致骨骼流失、肌肉萎缩、心血管退化。火星重力仅为地球的 38%。",
+    "impact": "每月 1-2% 骨密度下降，5-11 天不锻炼可丧失 20% 肌肉质量。返回地球后恢复困难。",
+    "mitigation": [
+      "严格锻炼 regime（每天 2 小时）",
+      "人工重力旋转栖息地（概念阶段）",
+      "药物干预（双膦酸盐等）",
+      "渐进重力适应训练"
+    ],
+    "data": { "boneLoss": "1-2%/月", "muscleLoss": "20%/5-11天（不锻炼）", "marsGravity": "38% 地球" }
+  },
+  {
+    "id": "psychological",
+    "name": "心理挑战",
+    "severity": 3,
+    "likelihood": 4,
+    "level": "中",
+    "levelColor": "#ffaa00",
+    "icon": "🧠",
+    "description": "长期隔离、密闭空间、单调环境、与地球通信延迟（4-24 分钟）、持续监控压力。",
+    "impact": "抑郁、焦虑、多疑、疲劳、人际冲突。极地科考站和潜艇数据表明长期隔离显著影响心理状态。",
+    "mitigation": [
+      "专业心理咨询和支持",
+      "VR 地球环境模拟",
+      "团队建设和冲突解决机制",
+      "个人空间和隐私保障"
+    ],
+    "data": { "commDelay": "4-24 分钟（单向）", "missionDuration": "2-3 年" }
+  },
+  {
+    "id": "dust-storm",
+    "name": "火星沙尘暴",
+    "severity": 3,
+    "likelihood": 4,
+    "level": "中",
+    "levelColor": "#ffaa00",
+    "icon": "🌪️",
+    "description": "全球性沙尘暴可持续数月，局部沙尘暴频繁。覆盖太阳能板、损坏敏感设备、磨损机械结构。",
+    "impact": "太阳能系统效率大幅下降（Opportunity 因此失联）。核电源可缓解此问题。",
+    "mitigation": [
+      "核裂变电源（不受沙尘暴影响）",
+      "设备防尘密封设计",
+      "关键系统沙尘暴应急预案",
+      "太阳能板自动清洁机制"
+    ],
+    "data": { "globalStormDuration": "数月", "localStormFrequency": "频繁" }
+  },
+  {
+    "id": "return-difficulty",
+    "name": "返回地球困难",
+    "severity": 4,
+    "likelihood": 3,
+    "level": "中",
+    "levelColor": "#ffaa00",
+    "icon": "🔄",
+    "description": "长期火星生活后身体适应 38% 重力，返回 1g 环境极度困难。需等待 26 个月转移窗口。",
+    "impact": "冷汗、恶心、呕吐、晕动症、定向障碍。部分效应可能永远无法完全恢复。",
+    "mitigation": [
+      "渐进重力适应训练",
+      "返回前强化锻炼计划",
+      "医疗监测和支持",
+      "考虑长期定居不返回方案"
+    ],
+    "data": { "waitTime": "26 个月", "reversibility": "部分不可逆" }
+  }
+]

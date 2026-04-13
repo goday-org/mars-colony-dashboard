@@ -1,0 +1,128 @@
+[
+  {
+    "id": "propulsion",
+    "name": "推进系统",
+    "icon": "🚀",
+    "progress": 72,
+    "trl": 7,
+    "status": "开发中",
+    "color": "#00d4ff",
+    "description": "液氧/液甲烷化学推进系统，基于 SpaceX Starship 平台。Starship V3 即将首飞，已完成多次成功试飞和回收验证。",
+    "challenges": [
+      "轨道加注技术尚未大规模验证",
+      "低温推进剂长期储存与蒸发损失控制",
+      "火星 EDL（进入、下降、着陆）需实际数据验证"
+    ],
+    "recentProgress": [
+      { "date": "2024", "event": "Starship 完成多次成功试飞和回收" },
+      { "date": "2025", "event": "Super Heavy Booster 回收技术成熟" },
+      { "date": "2026", "event": "Starship V3 首飞准备中" }
+    ],
+    "agency": "SpaceX"
+  },
+  {
+    "id": "life-support",
+    "name": "生命保障",
+    "icon": "🫁",
+    "progress": 45,
+    "trl": 4,
+    "status": "研发阶段",
+    "color": "#00ff88",
+    "description": "环境控制与生命保障系统（ECLSS）。国际空间站 ECLSS 已达 TRL 9，但火星级闭环系统需更高回收率（>98%）和更长自主运行时间。",
+    "challenges": [
+      "远离地球补给，需高度自主和可靠",
+      "原位资源利用（ISRU）生产氧气和推进剂技术不成熟",
+      "闭环水回收率需从 90% 提升至 >98%"
+    ],
+    "recentProgress": [
+      { "date": "2020", "event": "ISS ECLSS 水回收率达 90%" },
+      { "date": "2024", "event": "MOXIE 实验成功在火星制氧" },
+      { "date": "2025", "event": "新一代闭环 ECLSS 地面测试中" }
+    ],
+    "agency": "NASA"
+  },
+  {
+    "id": "habitat",
+    "name": "居住舱",
+    "icon": "🏠",
+    "progress": 38,
+    "trl": 3,
+    "status": "概念设计",
+    "color": "#ff6b35",
+    "description": "火星表面居住设施，包括充气式栖息地、3D 打印栖息地、风化层覆盖地下/半地下栖息地等多种方案。Starship 船体可作为初期栖息地。",
+    "challenges": [
+      "辐射屏蔽需至少 2-3 米风化层覆盖",
+      "热管理（火星平均温度 -60°C）",
+      "气压维持与微陨石防护"
+    ],
+    "recentProgress": [
+      { "date": "2022", "event": "NASA NEXT 栖息地概念评审完成" },
+      { "date": "2024", "event": "3D 打印栖息地技术地面验证" },
+      { "date": "2025", "event": "AI SpaceFactory 火星栖息地原型测试" }
+    ],
+    "agency": "NASA/商业"
+  },
+  {
+    "id": "communication",
+    "name": "通信系统",
+    "icon": "📡",
+    "progress": 85,
+    "trl": 9,
+    "status": "运行成熟",
+    "color": "#a855f7",
+    "description": "深空网络（DSN）全球三站覆盖（加州戈尔德斯通、西班牙马德里、澳大利亚堪培拉），支持当前所有火星任务。火星-地球通信延迟 4-24 分钟。",
+    "challenges": [
+      "通信延迟 4-24 分钟影响实时控制",
+      "需要更强大的火星轨道通信基础设施支持载人任务",
+      "大带宽需求（视频、科学数据、遥测）"
+    ],
+    "recentProgress": [
+      { "date": "2006", "event": "MRO 入轨，增强火星中继能力" },
+      { "date": "2021", "event": "多个火星轨道器提供中继服务" },
+      { "date": "2025", "event": "下一代深空通信技术预研中" }
+    ],
+    "agency": "NASA"
+  },
+  {
+    "id": "power",
+    "name": "能源系统",
+    "icon": "⚡",
+    "progress": 55,
+    "trl": 5,
+    "status": "开发中",
+    "color": "#ffaa00",
+    "description": "NASA 已选定核裂变反应堆作为载人火星任务的主要地表发电技术。太阳能受沙尘暴影响大，RTG 功率仅 110-125W，不适合大型栖息地。",
+    "challenges": [
+      "核裂变反应堆需在火星环境长期稳定运行",
+      "月球裂变电源系统验证是火星前序技术",
+      "太阳能板在沙尘暴中效率大幅下降"
+    ],
+    "recentProgress": [
+      { "date": "2018", "event": "Kilopower 核裂变电源地面演示成功" },
+      { "date": "2024", "event": "NASA 选定核裂变为火星主电源" },
+      { "date": "2025", "event": "月球裂变电源系统开发中" }
+    ],
+    "agency": "NASA/DOE"
+  },
+  {
+    "id": "landing",
+    "name": "着陆系统",
+    "icon": "🎯",
+    "progress": 35,
+    "trl": 3,
+    "status": "早期验证",
+    "color": "#ec4899",
+    "description": "火星进入、下降和着陆（EDL）系统。火星大气稀薄（约地球 1%），传统方法质量上限约 1 吨。Starship 目标实现数十吨级着陆，历史成功率约 50%。",
+    "challenges": [
+      "火星着陆任务历史成功率约 50%",
+      "Starship 需从 7.5km/s 减速至 1km/s",
+      "超音速反推技术尚未在火星实际验证"
+    ],
+    "recentProgress": [
+      { "date": "2021", "event": "Perseverance 成功着陆（使用天空起重机）" },
+      { "date": "2024", "event": "Starship 地球再入回收验证" },
+      { "date": "2026", "event": "计划：首批无人 Starship 收集火星 EDL 数据" }
+    ],
+    "agency": "SpaceX/NASA"
+  }
+]

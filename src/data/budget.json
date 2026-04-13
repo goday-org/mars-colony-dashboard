@@ -1,0 +1,31 @@
+{
+  "agencies": [
+    { "name": "NASA", "budget": 10, "unit": "亿美元", "year": "FY2026", "detail": "火星专项预算" },
+    { "name": "NASA", "budget": 188, "unit": "亿美元", "year": "FY2026", "detail": "NASA 总预算" },
+    { "name": "SpaceX", "budget": 1000, "unit": "亿美元", "year": "长期估算", "detail": "火星基地计划整体" },
+    { "name": "ESA", "budget": 6, "unit": "亿欧元", "year": "年度", "detail": "火星相关活动" },
+    { "name": "CNSA", "budget": 8, "unit": "亿美元", "year": "天问一号", "detail": "中国首次火星任务" }
+  ],
+  "nasaBreakdown": [
+    { "category": "火星探索运营", "amount": 2.71, "unit": "亿美元" },
+    { "category": "EDL 系统开发", "amount": 0.27, "unit": "亿美元" },
+    { "category": "地表基础设施", "amount": 0.56, "unit": "亿美元" },
+    { "category": "推进系统研究", "amount": 0.45, "unit": "亿美元" },
+    { "category": "通信与导航", "amount": 0.38, "unit": "亿美元" },
+    { "category": "其他（架构/管理）", "amount": 5.63, "unit": "亿美元" }
+  ],
+  "historicalMissions": [
+    { "name": "Curiosity (MSL)", "cost": 25, "year": 2012, "agency": "NASA" },
+    { "name": "Perseverance", "cost": 27, "year": 2021, "agency": "NASA" },
+    { "name": "InSight", "cost": 8.14, "year": 2018, "agency": "NASA" },
+    { "name": "天问一号", "cost": 8, "year": 2021, "agency": "CNSA" },
+    { "name": "ExoMars", "cost": 16, "year": 2016, "agency": "ESA", "currency": "亿欧元" }
+  ],
+  "resources": [
+    { "name": "氧气储备", "value": 78, "target": 100, "unit": "%", "icon": "🫁", "color": "#00d4ff" },
+    { "name": "水资源", "value": 65, "target": 100, "unit": "%", "icon": "💧", "color": "#00ff88" },
+    { "name": "燃料储备", "value": 42, "target": 100, "unit": "%", "icon": "⛽", "color": "#ff6b35" },
+    { "name": "食物储备", "value": 55, "target": 100, "unit": "%", "icon": "🍎", "color": "#ffaa00" },
+    { "name": "备件库存", "value": 70, "target": 100, "unit": "%", "icon": "🔧", "color": "#a855f7" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "history": [
+    { "year": 1965, "event": "Mariner 4 — 首次成功飞掠火星", "agency": "NASA", "detail": "传回 22 张火星近距离照片，揭示火星表面类似月球" },
+    { "year": 1971, "event": "Mariner 9 — 首个火星轨道器", "agency": "NASA", "detail": "首次从轨道拍摄火星全球照片，发现奥林匹斯山" },
+    { "year": 1976, "event": "Viking 1/2 — 首次成功火星着陆", "agency": "NASA", "detail": "传回首批火星地表照片，进行生命探测实验" },
+    { "year": 1997, "event": "Mars Pathfinder / Sojourner", "agency": "NASA", "detail": "首辆火星漫游车，验证低成本火星着陆技术" },
+    { "year": 2004, "event": "Spirit & Opportunity 着陆", "agency": "NASA", "detail": "设计寿命 90 天，Opportunity 工作近 15 年" },
+    { "year": 2006, "event": "MRO 入轨", "agency": "NASA", "detail": "最强火星轨道器，至今仍在工作" },
+    { "year": 2008, "event": "Phoenix 着陆器", "agency": "NASA", "detail": "确认火星存在水冰" },
+    { "year": 2012, "event": "Curiosity 着陆盖尔陨石坑", "agency": "NASA", "detail": "已运行 13 年+，发现古代火星曾存在液态水证据" },
+    { "year": 2021, "event": "天问一号 + 祝融号", "agency": "CNSA", "detail": "中国首次火星任务，一次实现绕落巡" },
+    { "year": 2021, "event": "Perseverance + Ingenuity", "agency": "NASA", "detail": "首次火星飞行（直升机），开始火星样本采集" },
+    { "year": 2024, "event": "Starship 完成多次成功试飞", "agency": "SpaceX", "detail": "Super Heavy Booster 成功回收，技术快速迭代" },
+    { "year": 2025, "event": "NASA 完成 Moon to Mars 架构评审", "agency": "NASA", "detail": "选定核裂变为火星主电源，推进系统方案评估中" }
+  ],
+  "future": [
+    { "year": 2026, "event": "Starship V3 首飞", "agency": "SpaceX", "confidence": "高", "detail": "Musk 宣布 4-6 周内首飞" },
+    { "year": 2026, "event": "Artemis II 载人绕月飞行", "agency": "NASA", "confidence": "高", "detail": "4 名航天员绕月飞行，验证猎户座飞船" },
+    { "year": 2026, "event": "首批无人 Starship 飞往火星", "agency": "SpaceX", "confidence": "中", "detail": "地球-火星转移窗口，Musk 自评成功概率 50%" },
+    { "year": 2027, "event": "无人 Starship 预计到达火星", "agency": "SpaceX", "confidence": "中", "detail": "收集关键 EDL 数据，搭载 Tesla Optimus 机器人" },
+    { "year": 2028, "event": "下一火星窗口 — 基础设施建设", "agency": "SpaceX", "confidence": "中", "detail": "更多 Starship 前往火星，建设地表基础设施，勘探水冰资源" },
+    { "year": 2029, "event": "天问三号火星采样返回", "agency": "CNSA", "confidence": "中高", "detail": "中国首次火星采样返回任务" },
+    { "year": 2030, "event": "NASA 载人火星任务架构确定", "agency": "NASA", "confidence": "中", "detail": "基于 Artemis 月球任务验证结果确定最终架构" },
+    { "year": 2031, "event": "SpaceX 首次载人火星任务", "agency": "SpaceX", "confidence": "低", "detail": "更可能的载人时间点，取决于无人任务结果" },
+    { "year": 2033, "event": "火星定居点前期工程启动", "agency": "SpaceX", "confidence": "低", "detail": "建设初期居住设施和生命保障系统" },
+    { "year": 2050, "event": "火星自持城市（目标）", "agency": "SpaceX/多国", "confidence": "极低", "detail": "Musk 目标百万人规模，预计需 20 年以上" }
+  ]
+}
