@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+const base = import.meta.env.BASE_URL
+
 const routes = [
   { path: '/', name: 'overview', component: () => import('../views/OverviewView.vue'), meta: { title: '总览' } },
   { path: '/subsystems', name: 'subsystems', component: () => import('../views/SubsystemView.vue'), meta: { title: '子系统进度' } },
@@ -9,7 +11,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(base),
   routes,
 })
 
