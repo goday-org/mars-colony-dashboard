@@ -15,4 +15,18 @@ const router = createRouter({
   routes,
 })
 
+// GitHub Pages SPA routing fix
+// Handle redirect from 404.html: ?p=/subsystems -> navigate to /subsystems
+router.beforeEach((to, from, next) => {
+  const redirect = new URLSearchParams(window.location.search).get('p')
+  if (redirect && to.path === '/') {
+    const targetPath = redirect.startsWith('/') ? redirect : '/' + redirect
+    // Clean up the URL
+    window.history.replaceState(null, '', base + targetPath.replace(/^\//, ''))
+    next(targetPath)
+    return
+  }
+  next()
+})
+
 export default router
