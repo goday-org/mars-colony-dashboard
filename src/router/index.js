@@ -1,6 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
-
-const base = import.meta.env.BASE_URL
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   { path: '/', name: 'overview', component: () => import('../views/OverviewView.vue'), meta: { title: '总览' } },
@@ -11,22 +9,11 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(base),
+  history: createWebHashHistory(),
   routes,
-})
-
-// GitHub Pages SPA routing fix
-// Handle redirect from 404.html: ?p=/subsystems -> navigate to /subsystems
-router.beforeEach((to, from, next) => {
-  const redirect = new URLSearchParams(window.location.search).get('p')
-  if (redirect && to.path === '/') {
-    const targetPath = redirect.startsWith('/') ? redirect : '/' + redirect
-    // Clean up the URL
-    window.history.replaceState(null, '', base + targetPath.replace(/^\//, ''))
-    next(targetPath)
-    return
+  scrollBehavior() {
+    return { top: 0 }
   }
-  next()
 })
 
 export default router
